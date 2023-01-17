@@ -18,6 +18,11 @@ jobs:
       run: yarn build
     - name: Generate .dmg file
       run: bash generate-dmg.sh
+    - name: Get latest tag
+      run: git describe --tags --abbrev=0
+      id: latest_tag
+    - name: Set version
+      run: echo ::set-env name=TAG_NAME::${{ steps.latest_tag.output }}
     - name: Create release
       uses: actions/create-release@v1
       env:

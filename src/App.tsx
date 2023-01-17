@@ -54,12 +54,11 @@ function App(): JSX.Element {
   return (
     <View style={{flex: 1, flexDirection: 'column'}}>
       {!reload && <ChatGptWebview />}
-      <View style={{position: 'absolute', bottom: 140, right: 30}}>
-        {/* <Button onPress={() => clickOnReload()} title="reload" /> */}
-        <TouchableOpacity onPress={() => clickOnReload()}>
-          <Image source={reloadimage} style={{width: 30, height: 30}}></Image>
-        </TouchableOpacity>
-      </View>
+      <TouchableOpacity
+        onPress={clickOnReload}
+        style={{position: 'absolute', bottom: 140, right: 30}}>
+        <Image source={reloadimage} style={{width: 40, height: 41}}></Image>
+      </TouchableOpacity>
     </View>
   );
 }
