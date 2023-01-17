@@ -1,4 +1,4 @@
-# ChatGPT App
+# ChatGPTO App
 
 This app is a container for the ChatGPT language model, allowing users to interact with the model through a React Native interface on macOS. The model's response is displayed in a webview within the app.
 
